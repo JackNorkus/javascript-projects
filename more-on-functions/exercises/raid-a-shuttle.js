@@ -38,13 +38,20 @@ console.log(notAtAllSusVar(fuelLevel));
 
 let iAmStealingYourStuff = function(arr) {
   let swagArray = [];
-  swagArray.push(arr.splice(3, 2));
+  swagArray = arr.slice(3, 5);
+  arr.splice(3, 2);
   arr.push("sand bag");
   arr.push("rock");
   return swagArray;
 };
 
-console.log(iAmStealingYourStuff(cargoHold));
+let irs = function(levelOfFuel, itemsInCargo) {
+  let swagArr = iAmStealingYourStuff(itemsInCargo);
+  return `Raided ${notAtAllSusVar(levelOfFuel)} kg of fuel from the tanks, and stole ${swagArr[0]} and ${swagArr[1]} from the cargo hold.`
+}
+
+console.log(irs(fuelLevel, cargoHold));
+
 console.log(holdStatus(cargoHold));
 
 // Steal some fuel from the shuttle:
