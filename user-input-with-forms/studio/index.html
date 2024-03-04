@@ -10,7 +10,7 @@
 		// }
     window.addEventListener("load", function() {
         // TODO: register the handler
-		let form = document.getElementById("searchform");
+		let form = document.getElementById("searchForm");
 		form.addEventListener("submit", (event) => {
 			let engineSelector = document.querySelector("input[name=engine]:checked"); //whichever engine radio button is checked
 			form.setAttribute("action", engineSelector.value);
